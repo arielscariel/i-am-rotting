@@ -15,13 +15,13 @@ function randomText(length = 14) {
   return result;
 }
 
-recognition.lang = 'en-US';
+
 
 // Initialize SpeechRecognition
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition();
 
-
+recognition.lang = 'en-US';
 
 
 recognition.interimResults = true;
