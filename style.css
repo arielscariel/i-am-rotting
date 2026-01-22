@@ -1,0 +1,115 @@
+
+
+.beginning-text {
+  position: absolute;
+  left: 1000px;
+  top: 400px;
+  
+
+
+  opacity: 0;
+  animation: fade 10s ease forwards;
+}
+
+
+@keyframes fade {
+  0%   { opacity: 0; }
+  25%  { opacity: 1; }
+  75%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+
+
+#overlay {
+  margin: 0;
+  color: #fff;
+}
+
+ 
+#overlay.rotting {
+  color: #000;
+  font-family:'Courier New', Courier, monospace;
+}
+
+
+
+
+#pigeon {
+  background-image: url(img/pigeon-0.gif);
+  position: absolute;
+  width: 750px;
+  height: 750px;
+  left: 75px;
+  top: 30px;
+  background-position: center;
+  background-size: contain;
+  transition: background-image 0.3s ease;
+}
+
+#pigeon.stage-0 {
+  background-image: url(img/pigeon-0.gif);
+}
+
+#pigeon.stage-1 {
+  background-image: url(img/pigeon-1.gif);
+}
+
+#pigeon.stage-2 {
+  background-image: url(img/pigeon-2.gif);
+}
+#pigeon.stage-3 {
+  background-image: url(img/pigeon-3.gif);
+}
+
+body {
+  height: 100vh;
+  width: 100wh;
+  transition: background-color 0.5 ease;
+
+}
+
+body.stage-0 {
+  background-color: #fffee9;
+}
+
+body.stage-1 {
+  background-color: #8f7481;
+}
+
+body.stage-2 {
+  background-color: #4b3d4b;
+}
+
+body.stage-3 {
+  background-color: #242126;
+}
+
+
+.tooltip {
+  position: absolute;  
+  left: 520px;          
+  top: 50px;        
+ 
+
+ 
+  color: #fff;
+  font-size: 18px;
+  max-width: 28ch;
+  text-align: center;
+
+  --b: 1em;
+  --h: .7em;
+  --c:#bfb9b6;
+
+  padding: 1em;
+  border-radius: 1.2em;
+  border-bottom-left-radius: 0;
+  clip-path: polygon(0 0,100% 0,100% 100%,
+    var(--b) 100%,
+    calc(-1*var(--h)) calc(100% + var(--h)),
+    0 calc(100% - var(--b)));
+  background: var(--c);
+  border-image: conic-gradient(var(--c) 0 0) 0 0 999 999/
+    0 0 calc(var(--h) + var(--b)) calc(var(--h) + var(--b))/0 0 var(--h) var(--h);
+}
